@@ -875,7 +875,7 @@ export default function App() {
 
                   <div className="max-w-2xl mx-auto p-4 rounded-lg bg-[#0e0e10]/80 border border-white/5 text-xs text-[#b9cacb] text-left space-y-1.5">
                     <p className="font-bold text-white flex items-center gap-1.5">
-                      <Sparkles className="size-3.5 text-[#00f2ff]" />
+                      
                       Portfolio &amp; Custom Integration Features:
                     </p>
                     <p className="text-left leading-relaxed">
