@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+.env*
+!.env.example
+
+backend/.env
+usage_limits.db
+backend/usage_limits.db
+
+__pycache__/
+backend/__pycache__/
+*.pyc

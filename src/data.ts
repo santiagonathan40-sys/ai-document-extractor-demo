@@ -1,0 +1,125 @@
+import { UseCase, ExtractionResult } from "./types";
+
+export const USE_CASES: UseCase[] = [
+  {
+    id: "invoices",
+    title: "Invoices",
+    description: "Automate accounts payable by pulling line items, vendor names, and total amounts.",
+    icon: "receipt_long",
+    fields: ["Invoice Number", "Total Amount", "Due Date"],
+  },
+  {
+    id: "mortgage-files",
+    title: "Mortgage files",
+    description: "Extract borrower details, rate types, renewal dates, and loan amounts from mortgage packets.",
+    icon: "home_work",
+    fields: ["Client Name", "Mortgage Amount", "Rate Type"],
+  },
+  {
+    id: "real-estate",
+    title: "Real estate documents",
+    description: "Parse property listings, lease agreements, contract values, and addresses.",
+    icon: "real_estate_agent",
+    fields: ["Property Address", "Client Name", "Total Amount"],
+  },
+  {
+    id: "donor-records",
+    title: "Donor records",
+    description: "Extract contribution history, donor information, and donation amounts automatically.",
+    icon: "volunteer_activism",
+    fields: ["Donor Name", "Donation Amount", "Due Date"],
+  },
+  {
+    id: "client-forms",
+    title: "Client forms",
+    description: "Track customer intake fields, requested service types, and renewal deadlines.",
+    icon: "assignment",
+    fields: ["Client Name", "Service Type", "Renewal Date"],
+  },
+  {
+    id: "reports",
+    title: "Reports",
+    description: "Digest business reports, executive summaries, totals, and due date tables.",
+    icon: "analytics",
+    fields: ["Customer Name", "Total Amount", "Due Date"],
+  },
+  {
+    id: "custom-docs",
+    title: "Custom business documents",
+    description: "Train the extraction system to find specific key-value pairs in unique proprietary formats.",
+    icon: "description",
+    fields: ["Client Name", "Total Amount", "Service Type"],
+  },
+];
+
+export const MOCK_EXTRACTION_RESULTS: ExtractionResult[] = [
+  {
+    fileName: "sample_invoice_102.pdf",
+    status: "Extracted",
+    data: {
+      "Client Name": "Acme Corp Ltd.",
+      "Renewal Date": "2026-12-15",
+      "Invoice Number": "INV-0023",
+      "Total Amount": "$1,250.00",
+      "Due Date": "2026-12-31",
+      "Mortgage Amount": "Not found",
+      "Donor Name": "Not found",
+      "Customer Name": "Acme Corp Ltd.",
+      "Property Address": "Not found",
+      "Rate Type": "Not found",
+      "Donation Amount": "Not found",
+      "Service Type": "Software Consulting",
+    },
+  },
+  {
+    fileName: "residential_lease_agreement.pdf",
+    status: "Extracted",
+    data: {
+      "Client Name": "Stark Industries",
+      "Renewal Date": "2027-11-05",
+      "Invoice Number": "RE-2026-01",
+      "Total Amount": "$45,000.00",
+      "Due Date": "2026-12-01",
+      "Mortgage Amount": "Not found",
+      "Donor Name": "Not found",
+      "Customer Name": "Stark Industries",
+      "Property Address": "10880 Malibu Point, CA",
+      "Rate Type": "Fixed",
+      "Donation Amount": "Not found",
+      "Service Type": "Lease Administration",
+    },
+  },
+  {
+    fileName: "charity_donation_receipt.pdf",
+    status: "Extracted",
+    data: {
+      "Client Name": "Wayne Foundation",
+      "Renewal Date": "2026-08-10",
+      "Invoice Number": "REC-904",
+      "Total Amount": "$10,000.00",
+      "Due Date": "2026-08-10",
+      "Mortgage Amount": "Not found",
+      "Donor Name": "Bruce Wayne",
+      "Customer Name": "Bruce Wayne",
+      "Property Address": "Gotham City, NJ",
+      "Rate Type": "Not found",
+      "Donation Amount": "$10,000.00",
+      "Service Type": "Philanthropic Grant",
+    },
+  },
+];
+
+export const POPULAR_FIELD_SUGGESTIONS = [
+  "Client Name",
+  "Renewal Date",
+  "Mortgage Amount",
+  "Rate Type",
+  "Invoice Number",
+  "Due Date",
+  "Customer Name",
+  "Total Amount",
+  "Donor Name",
+  "Donation Amount",
+  "Property Address",
+  "Service Type"
+];

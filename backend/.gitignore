@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+*.xlsx
+*.csv
+temp_uploads/
+usage_limits.db
